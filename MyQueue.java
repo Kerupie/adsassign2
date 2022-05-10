@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 public class MyQueue<T>{
-    private ArrayList myArrayList;
+    private ArrayList<T> myArrayList;
 
     public MyQueue()
     {
-        myArrayList = new ArrayList();
+        myArrayList = new ArrayList<>();
     }
 
     public boolean isEmpty() {
@@ -18,10 +18,10 @@ public class MyQueue<T>{
 
     public T dequeue()
     {
-        return (T) myArrayList.remove(0);
+        return myArrayList.remove(0);
     }
 
-    public T push(T item)
+    public T enqueue(T item)
     {
         myArrayList.add(item);
         return item;
@@ -29,7 +29,7 @@ public class MyQueue<T>{
 
     public T peek()
     {
-        return (T) myArrayList.get(size()-1);
+        return myArrayList.get(size()-1);
     }
 
 
